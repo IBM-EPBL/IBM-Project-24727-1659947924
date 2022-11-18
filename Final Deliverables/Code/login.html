@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="register.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body background="img8.jpg">
+<div class="container">
+<div class="title">Login</div>
+<div class="content">
+<form action="{{url_for('register')}}" method="POST" class="login email">
+<div class="user-details">
+<div class="input-box">
+<span class="details">Username</span>
+<input type="text" placeholder="Enter your username"
+name="username">
+</div>
+
+<br><br>
+<div class="input-box">
+<span class="details">Password</span>
+<input type="password" placeholder="Enter your password"
+name="passwords">
+</div>
+</div>
+<div class="button">
+<a href="USER DETAILS.html">
+<center>SUBMIT</center></a>
+<br><br>
+not registered?
+ <a href="register.html"> register </a>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
