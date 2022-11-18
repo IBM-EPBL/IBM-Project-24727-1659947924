@@ -1,0 +1,53 @@
+----- remove debug
+
+----- install docker
+
+----- install ibmcloud cli
+
+
+
+
+docker build -t nut-ass .
+
+docker images
+
+docker run -p 5000:5000 nut-ass
+
+
+
+
+ibmcloud plugin install container-registry
+
+ibmcloud plugin install container-service
+
+ibmcloud login
+
+ibmcloud cr login --client docker
+
+ibmcloud cr namespace-add nut-space
+
+docker tag nut-ass icr.io/nut-space/nut-ass:latest
+
+docker push icr.io/nut-space/nut-ass:latest
+
+ibmcloud cr image-list
+
+
+
+
+ibmcloud ks cluster config --cluster cde0ac7f066vuobgl68g
+
+kubectl apply -f deployment.yaml
+
+ibmcloud cs workers --cluster cde0ac7f066vuobgl68g
+
+kubectl describe service nut-ass | grep NodePort
+
+http://<public-ip-address>:<port>/app
+
+
+
+
+kubectl delete deploy nut-ass
+
+ibmcloud cs cluster rm -c cde0ac7f066vuobgl68g -f
